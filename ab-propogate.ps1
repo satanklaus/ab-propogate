@@ -4,7 +4,7 @@ $cit_ldaptype_hex = [byte[]](0xF2, 0x09, 0x61, 0x3C, 0x13, 0x64, 0x43, 0x32, 0xB
 $cit_ldapconfig = "c494fa4a2cf941859f2a7b45fe416326\"
 $cit_ldapconfig_hex = [byte[]](0xC4,0x94,0xFA,0x4A,0x2C,0xF9,0x41,0x85,0x9F,0x2A,0x7B,0x45,0xFE,0x41,0x63,0x26)
 $backup = "9207f3e0a3b11019908b08002b2a56c2\"
-$LDAPdisplayname = "–ê–¥—Ä–µ—Å–Ω–∞—è –∫–Ω–∏–≥–∞ CIT PS5"
+$LDAPdisplayname = "¿‰ÂÒÌ‡ˇ ÍÌË„‡ – ŒÃ»"
 $LDAPserver = "192.168.1.60"
 $LDAPport = "389"
 $LDAPsearchbase = "dc=rk,dc=local"
@@ -49,10 +49,12 @@ Set-ItemProperty -Path $profile$cit_ldaptype -Name '01023d0c' -Value $cit_ldapco
 
 New-Item -Path $profile$cit_ldapconfig -Force
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name '00033009' -Value ([byte[]](0x20,0x0,0x0,0x0))
-Set-ItemProperty -Path $profile$cit_ldapconfig -Name "00036623" -Value ([byte[]](0x01,0x0,0x0,0x0))
+#Set-ItemProperty -Path $profile$cit_ldapconfig -Name "00036623" -Value ([byte[]](0x01,0x0,0x0,0x0))
+Set-ItemProperty -Path $profile$cit_ldapconfig -Name "00036623" -Value ([byte[]](0x00,0x0,0x0,0x0))
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name "000b6613" -Value ([byte[]](0x0,0x0))
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name "000b6615" -Value ([byte[]](0x00,0x0))
-Set-ItemProperty -Path $profile$cit_ldapconfig -Name "000b6622" -Value ([byte[]](0x1,0x0))
+#Set-ItemProperty -Path $profile$cit_ldapconfig -Name "000b6622" -Value ([byte[]](0x1,0x0))
+Set-ItemProperty -Path $profile$cit_ldapconfig -Name "000b6622" -Value ([byte[]](0x0,0x0))
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name "001e3001" -Value $LDAPdisplayname
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name "001e3d09" -Value "EMABLT"
 Set-ItemProperty -Path $profile$cit_ldapconfig -Name "001e3d0a" -Value "BJABLR.DLL"
