@@ -32,7 +32,6 @@ for ($i = 0; $i -lt $count_sets; $i += 1)
 	if ("$($backup_sets[(16*$i)..(16*($i+1)-1)])" -like "$cit_ldapconfig_hex") 
 	{
 		$cit_ldapconfig_present = $true
-		echo "found settings"
 		break
 	}
 }
